@@ -1,8 +1,15 @@
+import React, {Fragment} from "react";
+import TabCart from "./Components/TabCart";
+import ProductTable from "./Components/ProductTable";
+
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <Fragment>
+      <h2>Hello</h2>
+      <TabCart/>
+      <ProductTable/>
+    </Fragment>
   );
 }
 
