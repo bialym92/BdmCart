@@ -30,30 +30,30 @@ const ProductTable = () => {
   return (
     <Fragment>
       <table>
-        <tr>
-          <th>Nazwa pl.</th>
-          <th>Nazwa lac.</th>
-          <th>Dostępna ilość</th>
-          <th>Lokalizacja</th>
-        </tr>
-        {queriedPlants.map((item)=>
-               { return(
-                <tr key={item.id}>
+        <thead>
+          <tr>
+            <th>Nazwa pl.</th>
+            <th>Nazwa lac.</th>
+            <th>Dostępna ilość</th>
+            <th>Lokalizacja</th>
+          </tr>
+        </thead>
+        <tbody>
+          {queriedPlants.map((item) => {
+            return (
+              <tr key={item.id} >
                 <td>{item.polishName}</td>
                 <td>{item.latinName}</td>
                 <td>{item.bdmQuantity}</td>
                 <td>{item.bdmLocalization}</td>
-                <td><BdmProductButton /></td>
-
-              </tr>)
-                
-                })}
-
+                <td>
+                  <BdmProductButton  id={item.id} />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
-
-
-
-
     </Fragment>
   );
 };
