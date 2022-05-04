@@ -1,5 +1,7 @@
 import React from 'react';
 
+/****************      to be contextualised -start      *****************/
+
 const queriedPlants = [
   //DUMMIE__DATA
   {
@@ -25,15 +27,17 @@ const queriedPlants = [
   },
 ];
 
-  // czy rzeczywiście kazdy button dostaje id ktore przydziela mu BdmProductTable
+const BdmCart = [];
+
+
+/****************      to be contextualised -end      *****************/
+
 
 const BdmProductButton = (props) => {
 
   const bdmAddProduct = () => {
-    console.log(props.id);
-    // const clickedProduct = queriedPlants.filter
 
-    function separateClickedProduct(arr, criteria) {
+    function filterProducts(arr, criteria) {
       return arr.filter(function(obj) {
         return Object.keys(criteria).every(function(c) {
           return obj[c] == criteria[c];
@@ -41,8 +45,20 @@ const BdmProductButton = (props) => {
       });
     }
 
-    console.log(separateClickedProduct(queriedPlants, { id: props.id}));
+    //separate clickedProduct from queriedPlants
 
+    const clickedProduct = filterProducts(queriedPlants, { id: props.id})[0];
+
+    //add clicked product to the Cart 
+    //dont add if thesame object already exists in the Cart
+
+    const findSameIdinCart = filterProducts(BdmCart, { id: clickedProduct.id});
+
+    if (findSameIdinCart.length < 1) {
+      BdmCart.push(clickedProduct);
+    } else {
+      console.log("Ten produkt jest juz w koszyku"); // ZASTĄPIĆ KOMUNIKATEM --!--
+    }
 
   };
 
