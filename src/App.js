@@ -37,7 +37,6 @@ class App extends React.Component {
           </button>
         </Sidebar>
         <div>
-          <TabCart />
           <ProductTable />
         </div>
       </Fragment>
