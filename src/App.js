@@ -24,7 +24,6 @@ class App extends React.Component {
     return (
       <Fragment>
         <Sidebar
-          sidebar={<b>Sidebar content</b>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "white" } }}
