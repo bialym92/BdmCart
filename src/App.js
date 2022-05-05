@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import TabCart from "./Components/CartComponents/TabCart";
-import ProductTable from "./Components/ProductTable";
+import BdmTabCart from "./Components/CartComponents/BdmTabCart";
+import BdmProductTable from "./Components/BdmProductTable";
 
 /******************  sidebar - https://www.npmjs.com/package/react-sidebar  *********************/
 import Sidebar from "react-sidebar";
@@ -28,7 +28,7 @@ class App extends React.Component {
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "white" } }}
           sidebar={
-          <TabCart />
+          <BdmTabCart />
           }
         >
 
@@ -37,7 +37,7 @@ class App extends React.Component {
           </button>
         </Sidebar>
         <div>
-          <ProductTable />
+          <BdmProductTable />
         </div>
       </Fragment>
     );

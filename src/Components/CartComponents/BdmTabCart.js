@@ -1,6 +1,7 @@
 import React from "react";
 import BdmProductItem from "./BdmProductItem";
 import BdmCartControls from "./BdmCartControls";
+import BdmClearCart from "./BdmClearCart";
 
 /****************      to be contextualised -start      *****************/
 
@@ -31,7 +32,7 @@ const BdmCart = [
 
 /****************      to be contextualised -end      *****************/
 
-const TabCart = () => {
+const BdmTabCart = () => {
 
   const bdmProductItems = BdmCart.map((product) => (
   <BdmProductItem 
@@ -48,11 +49,13 @@ const TabCart = () => {
       <div className="bdmFullCart">
 
       {bdmProductItems}
-
+      <BdmClearCart />
       </div>
-      <BdmCartControls />
+      <div>
+        <BdmCartControls />
+      </div>
     </div>
   );
 };
 
-export default TabCart;
+export default BdmTabCart;

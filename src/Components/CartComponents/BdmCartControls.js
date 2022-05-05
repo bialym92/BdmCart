@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 const BdmCartControls = () => {
   return (
-    <div>
+    <Fragment>
       controlls
-    </div>
+    </Fragment>
   );
 }
 

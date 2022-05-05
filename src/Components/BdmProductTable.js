@@ -30,7 +30,7 @@ const queriedPlants = [
 
 /****************      to be contextualised -end      *****************/
 
-const ProductTable = () => {
+const BdmProductTable = () => {
   return (
     <Fragment>
       <table>
@@ -62,4 +62,4 @@ const ProductTable = () => {
   );
 };
 
-export default ProductTable;
+export default BdmProductTable;
