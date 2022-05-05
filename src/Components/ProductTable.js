@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import BdmProductButton from "./BdmProductButton";
 
+/****************      to be contextualised -start      *****************/
+
 const queriedPlants = [
   //DUMMIE__DATA
   {
@@ -25,6 +27,8 @@ const queriedPlants = [
     bdmLocalization: "C3",
   },
 ];
+
+/****************      to be contextualised -end      *****************/
 
 const ProductTable = () => {
   return (
