@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import BdmTabCart from "./Components/CartComponents/BdmTabCart";
 import BdmProductTable from "./Components/BdmProductTable";
 
 /******************  sidebar - https://www.npmjs.com/package/react-sidebar  *********************/
 import Sidebar from "react-sidebar";
+import BdmCartProvider from "./store/BdmCartProvider";
 
 
 
@@ -22,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Fragment>
+      <BdmCartProvider>
         <Sidebar
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
@@ -39,14 +40,14 @@ class App extends React.Component {
         <div>
           <BdmProductTable />
         </div>
-      </Fragment>
+        </BdmCartProvider>
     );
   }
 }
 
 export default App;
 
-/******************  sidebar   *********************/
+/******************  sidebar - end   *********************/
 
 // function App() {
 //   return (

@@ -3,7 +3,11 @@ import React, {Fragment} from 'react';
 const BdmCartControls = () => {
   return (
     <Fragment>
-      controlls
+        {/* <BdmAddNewProduct />
+        <BdmSaveCart />
+        <BdmLoadCart />
+        <BdmDiscount />
+        <BdmPlaceOrder /> */}
     </Fragment>
   );
 }
